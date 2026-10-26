@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ersin Gündoğan</title>
+<meta name="description" content="Research, projects and videos by Ersin Gündoğan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Source+Serif+4:opsz,wght@8..60,200..900&display=swap">
+<style>
+:root{--dp-color-ground:#f3efe5;--dp-color-ink:#191916;--dp-color-secondary:#494843;--dp-color-rule:#9b978e;--dp-color-accent:#a3231d;--dp-typography-display:"Newsprint Display","Source Serif 4",Georgia,serif;--dp-typography-reading:"Newsprint Reading","EB Garamond",Georgia,serif;--dp-typography-body:20px;--dp-typography-reading-compact:19px;--dp-typography-label:12px;--dp-typography-control:15px;--dp-typography-label-weight:650;--dp-typography-display-weight:900;--dp-typography-body-leading:1.3;--dp-typography-control-leading:1.2;--dp-typography-label-tracking:.09em;--dp-spacing-column:24px;--dp-spacing-story:22px;--dp-radius-control:0;--dp-border-hairline:1px;--dp-border-section:4px;--dp-border-focus:2px;--dp-motion-transition:none}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--dp-color-ground);color:var(--dp-color-ink);font:var(--dp-typography-body)/var(--dp-typography-body-leading) var(--dp-typography-reading)}
+.sheet{max-width:1200px;margin:0 auto}
+h1,h2,h3{margin:0;font-family:var(--dp-typography-display);font-weight:var(--dp-typography-display-weight);letter-spacing:-.03em;line-height:1.02}
+p{margin:0 0 .7em}
+a{color:inherit}
+a:hover{background:var(--dp-color-ink);color:var(--dp-color-ground)}
+:focus-visible{outline:var(--dp-border-focus) solid var(--dp-color-ink);outline-offset:3px}
+h2[tabindex]:focus{outline:0}
+.label,.fl,nav a,figcaption,footer{font:var(--dp-typography-label-weight) var(--dp-typography-label)/1.3 var(--dp-typography-display);letter-spacing:var(--dp-typography-label-tracking);text-transform:uppercase}
+.label{display:block;margin:0 0 10px;color:var(--dp-color-accent)}
+
+/* masthead */
+.mast{padding-top:28px;text-align:center;border-bottom:var(--dp-border-section) solid var(--dp-color-ink)}
+.mast h1{padding:0 var(--dp-spacing-column);margin-bottom:20px;font-size:clamp(40px,9.5vw,120px);line-height:.95;letter-spacing:-.045em}
+nav{display:flex;flex-wrap:wrap;justify-content:center;border-top:var(--dp-border-hairline) solid var(--dp-color-ink)}
+nav a{padding:11px 18px;text-decoration:none}
+nav a[aria-current]{background:var(--dp-color-ink);color:var(--dp-color-ground)}
+
+/* lead: portrait + biography */
+.lead{display:grid;grid-template-columns:1fr 3fr;border-bottom:var(--dp-border-section) solid var(--dp-color-ink)}
+.lead>*{padding:var(--dp-spacing-story) var(--dp-spacing-column)}
+.lead figure{margin:0;border-right:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.lead img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1)}
+figcaption{margin-top:8px;color:var(--dp-color-secondary)}
+.headline{margin-bottom:18px;font-size:clamp(34px,5.2vw,68px)}
+.bio{max-width:34em}
+.bio::first-letter{float:left;padding:.06em .1em 0 0;font:var(--dp-typography-display-weight) 4em/.8 var(--dp-typography-display)}
+
+/* top projects */
+.sect{padding:var(--dp-spacing-story) var(--dp-spacing-column)}
+.sect h2{font-size:clamp(30px,4vw,48px)}
+.pins{display:grid;grid-template-columns:2fr 1fr;border-top:var(--dp-border-hairline) solid var(--dp-color-ink);border-bottom:var(--dp-border-section) solid var(--dp-color-ink)}
+.pin{padding:var(--dp-spacing-story) var(--dp-spacing-column);font-size:var(--dp-typography-reading-compact);border-left:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.pin:first-child{grid-row:span 2;border-left:0}
+.pin:nth-child(3){border-top:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.pin h3{margin-bottom:10px;font-size:30px}
+.pin:first-child h3{font-size:clamp(34px,4.6vw,58px)}
+.more{display:inline-block;font:var(--dp-typography-label-weight) var(--dp-typography-control)/var(--dp-typography-control-leading) var(--dp-typography-display);border-bottom:var(--dp-border-hairline) solid currentColor;text-decoration:none}
+
+/* four section boxes */
+.grid4{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--dp-border-section) solid var(--dp-color-ink)}
+.cell{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-height:220px;padding:var(--dp-spacing-story) var(--dp-spacing-column);text-decoration:none;border-top:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.cell:nth-child(even){border-left:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.cell:nth-child(-n+2){border-top:0}
+.cell h3{font-size:clamp(32px,5vw,60px)}
+.cell .sub{font-size:var(--dp-typography-reading-compact)}
+.cell .go{margin-top:auto;padding:9px 16px;border:var(--dp-border-hairline) solid currentColor;font:var(--dp-typography-label-weight) var(--dp-typography-control)/var(--dp-typography-control-leading) var(--dp-typography-display)}
+
+/* inner pages */
+.back{display:inline-block;margin:var(--dp-spacing-story) var(--dp-spacing-column) 0;padding:8px 14px;border:var(--dp-border-hairline) solid var(--dp-color-ink);font:var(--dp-typography-label-weight) var(--dp-typography-control)/var(--dp-typography-control-leading) var(--dp-typography-display);text-decoration:none}
+.vhead{padding:var(--dp-spacing-story) var(--dp-spacing-column)}
+.vhead h2{font-size:clamp(40px,7vw,84px)}
+.dek{margin:12px 0 0;color:var(--dp-color-secondary);font-style:italic}
+.list,.vids,.split{border-top:var(--dp-border-section) solid var(--dp-color-ink);border-bottom:var(--dp-border-section) solid var(--dp-color-ink)}
+.row{display:grid;grid-template-columns:1fr 3fr 1fr;border-top:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.row:first-child{border-top:0}
+.row>*{margin:0;padding:var(--dp-spacing-story) var(--dp-spacing-column)}
+.row>*+*{border-left:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.row h3{margin-bottom:8px;font-size:30px}
+.row div p{margin:0;font-size:var(--dp-typography-reading-compact)}
+.links{display:flex;flex-direction:column;align-items:flex-start;gap:8px;font:var(--dp-typography-label-weight) var(--dp-typography-control)/var(--dp-typography-control-leading) var(--dp-typography-display)}
+.vids{display:grid;grid-template-columns:1fr 1fr}
+.vid{padding:var(--dp-spacing-story) var(--dp-spacing-column)}
+.vid:nth-child(even){border-left:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.vid:nth-child(n+3){border-top:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.vid h3{margin:12px 0 6px;font-size:26px}
+.vid p{margin:0;font-size:var(--dp-typography-reading-compact)}
+.frame{aspect-ratio:16/9;border:var(--dp-border-hairline) solid var(--dp-color-ink)}
+.frame iframe{display:block;width:100%;height:100%;border:0}
+
+/* message + links */
+.split{display:grid;grid-template-columns:3fr 1fr}
+.split>*{padding:var(--dp-spacing-story) var(--dp-spacing-column)}
+.split>aside{border-left:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.fl{display:block;margin-bottom:18px}
+.fl input,.fl textarea{display:block;width:100%;margin-top:6px;padding:10px 12px;border:var(--dp-border-hairline) solid var(--dp-color-ink);border-radius:var(--dp-radius-control);background:transparent;color:var(--dp-color-ink);font:var(--dp-typography-body)/var(--dp-typography-body-leading) var(--dp-typography-reading);letter-spacing:normal;text-transform:none}
+.btn{padding:12px 24px;border:var(--dp-border-hairline) solid var(--dp-color-ink);border-radius:var(--dp-radius-control);background:transparent;color:var(--dp-color-ink);font:var(--dp-typography-label-weight) var(--dp-typography-control)/var(--dp-typography-control-leading) var(--dp-typography-display);cursor:pointer}
+.btn:hover{background:var(--dp-color-ink);color:var(--dp-color-ground)}
+.btn:disabled{opacity:.6;cursor:wait}
+#status{min-height:1.3em;margin:14px 0 0;font-size:var(--dp-typography-reading-compact)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+aside ul{margin:0;padding:0;list-style:none}
+aside li{border-top:var(--dp-border-hairline) solid var(--dp-color-rule)}
+aside li:first-child{border-top:0}
+aside li a{display:block;padding:12px 0;font:var(--dp-typography-display-weight) 24px/1.1 var(--dp-typography-display);letter-spacing:-.02em;text-decoration:none}
+footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding:18px var(--dp-spacing-column) 40px;color:var(--dp-color-secondary)}
+
+@media(max-width:1100px){
+.lead{grid-template-columns:1fr 2fr}
+.pins{grid-template-columns:3fr 2fr}
+.split{grid-template-columns:2fr 1fr}
+}
+@media(max-width:700px){
+.lead,.pins,.grid4,.vids,.split{grid-template-columns:1fr}
+.lead figure{border-right:0;border-bottom:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.lead img{max-width:260px}
+.pin{border-left:0;border-top:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.pin:first-child{grid-row:auto;border-top:0}
+.cell:nth-child(even),.vid:nth-child(even),.split>aside{border-left:0}
+.cell:nth-child(2),.vid:nth-child(2),.split>aside{border-top:var(--dp-border-hairline) solid var(--dp-color-rule)}
+.row{grid-template-columns:1fr 2fr}
+.row>.links{grid-column:1/-1;border-left:0;border-top:var(--dp-border-hairline) solid var(--dp-color-rule)}
+}
+</style>
+</head>
+<body>
+<!--
+  SETUP: search this file for "EDIT".
+  1. Save your photo next to this file as photo.jpg.
+  2. Replace the placeholder text, links and VIDEO_ID values.
+  3. Message form: create a free form at formspree.io and paste its URL into the form's action.
+  4. Upload index.html and photo.jpg to a GitHub repository, then turn on Settings > Pages.
+-->
+<div class="sheet">
+
+<header class="mast">
+  <h1>Ersin Gündoğan</h1><!-- EDIT: your name -->
+  <nav aria-label="Sections">
+    <a href="#/">Front page</a>
+    <a href="#/research">Research</a>
+    <a href="#/projects">Projects</a>
+    <a href="#/videos">Videos</a>
+    <a href="#/contact">Message &amp; links</a>
+  </nav>
+</header>
+
+<section class="lead" aria-label="About me">
+  <figure>
+    <img src="photo.jpg" width="400" height="500" alt="Portrait of Ersin Gündoğan"><!-- EDIT: photo and alt text -->
+    <figcaption>Ersin Gündoğan</figcaption>
+  </figure>
+  <div>
+    <h2 class="headline">Economics student, researcher and builder.</h2><!-- EDIT -->
+    <p class="bio">Replace this paragraph with your biography: who you are, what you study and what you are working on. Two or three sentences is plenty.</p><!-- EDIT -->
+  </div>
+</section>
+
+<main id="view">
+
+<!-- FRONT PAGE: pinned projects and the four boxes -->
+<section data-view="home">
+  <div class="sect"><h2>Top Projects</h2></div>
+  <div class="pins"><!-- EDIT: titles, text and links -->
+    <article class="pin">
+      <p class="label">Featured</p>
+      <h3>Your best project</h3>
+      <p>Two or three sentences: what it is, why it matters and what you built.</p>
+      <a class="more" href="https://github.com/YOUR-USERNAME/REPO">View project</a>
+    </article>
+    <article class="pin">
+      <h3>Second project</h3>
+      <p>One or two sentences about it.</p>
+      <a class="more" href="https://github.com/YOUR-USERNAME/REPO">View project</a>
+    </article>
+    <article class="pin">
+      <h3>Third project</h3>
+      <p>One or two sentences about it.</p>
+      <a class="more" href="https://github.com/YOUR-USERNAME/REPO">View project</a>
+    </article>
+  </div>
+  <div class="grid4">
+    <a class="cell" href="#/research"><h3>Research</h3><span class="sub">Papers, thesis and articles</span><span class="go">See research</span></a>
+    <a class="cell" href="#/projects"><h3>Projects</h3><span class="sub">Things I have built</span><span class="go">See projects</span></a>
+    <a class="cell" href="#/videos"><h3>Videos</h3><span class="sub">Videos I have uploaded</span><span class="go">Watch videos</span></a>
+    <a class="cell" href="#/contact"><h3>Message &amp; links</h3><span class="sub">Write to me or find me online</span><span class="go">Send a message</span></a>
+  </div>
+</section>
+
+<!-- RESEARCH: copy a whole <article class="row"> block for each item -->
+<section data-view="research" hidden>
+  <a class="back" href="#/">Back to front page</a>
+  <header class="vhead"><h2 tabindex="-1">Research</h2><p class="dek">Papers, thesis and articles.</p></header>
+  <div class="list">
+    <article class="row">
+      <p class="label">Research paper</p>
+      <div><h3>Title of your paper</h3><p>A short summary of the question, the method and the result.</p></div>
+      <div class="links"><a href="https://example.com/paper.pdf" target="_blank" rel="noopener">Read PDF</a></div>
+    </article>
+    <article class="row">
+      <p class="label">Thesis</p>
+      <div><h3>Title of your thesis</h3><p>A short summary of what the thesis argues.</p></div>
+      <div class="links"><a href="https://example.com/thesis.pdf" target="_blank" rel="noopener">Read PDF</a></div>
+    </article>
+    <article class="row">
+      <p class="label">Article</p>
+      <div><h3>Title of your article</h3><p>A short summary of the article.</p></div>
+      <div class="links"><a href="https://example.com/article" target="_blank" rel="noopener">Read article</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section data-view="projects" hidden>
+  <a class="back" href="#/">Back to front page</a>
+  <header class="vhead"><h2 tabindex="-1">Projects</h2><p class="dek">Things I have built.</p></header>
+  <div class="list">
+    <article class="row">
+      <p class="label">Project</p>
+      <div><h3>Project name</h3><p>What it does, what you used and what you learned.</p></div>
+      <div class="links"><a href="https://github.com/YOUR-USERNAME/REPO" target="_blank" rel="noopener">View code</a><a href="https://example.com" target="_blank" rel="noopener">Open live demo</a></div>
+    </article>
+    <article class="row">
+      <p class="label">Project</p>
+      <div><h3>Another project</h3><p>What it does, what you used and what you learned.</p></div>
+      <div class="links"><a href="https://github.com/YOUR-USERNAME/REPO" target="_blank" rel="noopener">View code</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- VIDEOS: in each src, replace VIDEO_ID with the part after "v=" in the YouTube link -->
+<section data-view="videos" hidden>
+  <a class="back" href="#/">Back to front page</a>
+  <header class="vhead"><h2 tabindex="-1">Videos</h2><p class="dek">Videos I have uploaded.</p></header>
+  <div class="vids">
+    <div class="vid">
+      <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Video one" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+      <h3>Video title</h3><p>One line about the video.</p>
+    </div>
+    <div class="vid">
+      <div class="frame"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Video two" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+      <h3>Video title</h3><p>One line about the video.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MESSAGE + LINKS -->
+<section data-view="contact" hidden>
+  <a class="back" href="#/">Back to front page</a>
+  <header class="vhead"><h2 tabindex="-1">Message &amp; links</h2><p class="dek">Send me a message. I will reply by email if I can help.</p></header>
+  <div class="split">
+    <form method="post" action="https://formspree.io/f/YOUR_FORM_ID"><!-- EDIT: your Formspree URL -->
+      <label class="fl">Name<input name="name" required autocomplete="name"></label>
+      <label class="fl">Email<input type="email" name="email" required autocomplete="email"></label>
+      <label class="fl">Message<textarea name="message" rows="7" required></textarea></label>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Send message</button>
+      <p id="status" role="status"></p>
+    </form>
+    <aside>
+      <ul><!-- EDIT: your profile links -->
+        <li><a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer><span>Ersin Gündoğan</span><a href="#/contact">Send a message</a></footer>
+</div>
+
+<script>
+// Sections open inside the page: #/research, #/projects, #/videos, #/contact
+const views=[...document.querySelectorAll('[data-view]')],navs=[...document.querySelectorAll('nav a')],base=document.title,key=h=>h.replace(/^#\/?/,'')||'home';
+let first=true;
+function route(){
+  const v=views.find(x=>x.dataset.view===key(location.hash))||views[0],home=v.dataset.view==='home',h=v.querySelector('h2');
+  views.forEach(x=>x.hidden=x!==v);
+  navs.forEach(a=>key(a.hash)===v.dataset.view?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+  document.title=home?base:h.textContent+' · '+base;
+  if(!first){home?scrollTo(0,0):(h.focus({preventScroll:true}),document.getElementById('view').scrollIntoView())}
+  first=false;
+}
+addEventListener('hashchange',route);route();
+
+// Message form: posts to your form service, so your email address never appears on the page
+const f=document.querySelector('form'),st=document.getElementById('status');
+f.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(f.action.includes('YOUR_FORM_ID')){st.textContent='The form isn’t connected yet. Paste your Formspree URL into the form’s action.';return}
+  const b=f.querySelector('button');b.disabled=true;st.textContent='Sending…';
+  try{
+    const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+    if(!r.ok)throw 0;
+    f.reset();st.textContent='Message sent. Thank you.';
+  }catch{st.textContent='The message didn’t send. Check your connection and try again.'}
+  b.disabled=false;
+});
+</script>
+</body>
+</html>
